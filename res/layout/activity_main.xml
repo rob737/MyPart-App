@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+ 
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_btn_find"
+            android:layout_alignParentRight="true" />
+ 
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/hnt_et_location"
+            android:layout_toLeftOf="@id/btn_find" />
+ 
+    </RelativeLayout>
+    
+<fragment 
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+<Spinner
+        android:id="@+id/spinnr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:prompt="@string/select2" />
+ <ImageView
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/down" />
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/up" 
+       />
+
+<Button
+        android:id="@+id/conti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_marginTop="20dip" 
+            android:layout_below="@+id/spinnr2"
+            android:gravity="left"
+            android:onClick="verify"/>
+
+  <TextView
+      android:id="@+id/tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/up"
+      android:layout_centerHorizontal="true"
+      android:layout_marginRight="0dip"
+      android:text="down"
+      android:textSize="15sp" />
+  <TextView
+      android:id="@+id/tvu"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/down"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="0dip"
+      android:text="up"
+      android:textSize="15sp" />
+</RelativeLayout>
+</LinearLayout>
